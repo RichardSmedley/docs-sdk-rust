@@ -1,0 +1,11 @@
+= Install and Start Using the Rust SDK with Couchbase Server
+:navtitle: Start Using the SDK
+:page-aliases: ROOT:start-using-sdk.adoc
+
+[abstract]
+The _Unofficial_ Couchbase Rust SDK enables you to interact with a Couchbase Server cluster from the Rust language.
+
+include::partial$beta-warning.adoc[]
+
+== Installing the SDK
+
