@@ -9,7 +9,7 @@ include::partial$beta-warning.adoc[]
 
 == Installing the SDK
 
-You need Rust version ?? or higher.
+You need Rust version 1.40.0 or higher.
 
 Installing Couchbase Rust SDK is ???
 
