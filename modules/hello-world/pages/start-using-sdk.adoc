@@ -9,3 +9,30 @@ include::partial$beta-warning.adoc[]
 
 == Installing the SDK
 
+You need Rust version ?? or higher.
+
+Installing Couchbase Rust SDK is ???
+
+We use https://github.com/tokio-rs/tokio[tokio] as our asynchronous I/O platform.
+
+== Hello World!
+
+[source,rust]
+----
+use couchbase::Cluster;
+use std::error::Error;
+use std::sync::Arc;
+
+#[tokio::main]
+pub async fn main() -> Result<(), Box<dyn Error>> {
+    let cluster = Arc::new(Cluster::connect("127.0.0.1", "Administrator", "password"));
+    let bucket = cluster.bucket("travel-sample");
+    let _collection = bucket.default_collection();
+
+    println!("{:?}", cluster.query("select 1=1", None).await.unwrap());
+
+    Ok(())
+}
+----
+
+Note the use of `await.unwrap` rather than ...
